@@ -1,15 +1,21 @@
-﻿public class Product
+﻿abstract class Product
 {
-    public string Name { get; set; }
-    public double Weight { get; set; }
-    public DateTime ExpirationDate { get; set; }
+    protected string name;
 
-    public Product(string name, double weight, DateTime expirationDate)
+    public string Name
     {
-        Name = name;
-        Weight = weight;
-        ExpirationDate = expirationDate;
+        get { return name; }
+        set { name = value; }
     }
+    protected double Weight { get; set; }// те саме що і про назву тільки скорочено
+    protected DateTime ExpirationDate { get; set; }
+
+        public Product(string name, double weight, DateTime expirationDate)// конструктур
+        {
+            Name = name;
+            Weight = weight;
+            ExpirationDate = expirationDate;
+        }
 
     public virtual void Quality()
     {
@@ -24,7 +30,7 @@
     }
 }
 
-public class Fruit : Product
+class Fruit : Product
 {
     public bool IsRipe { get; set; }
 
@@ -83,7 +89,7 @@ public class Fruit : Product
     }
 }
 
-public class Meat : Product
+class Meat : Product
 {
     public double FatPercentage { get; set; }
 
@@ -111,7 +117,7 @@ public class Meat : Product
     }
 }
 
-public class Vegetable : Product
+class Vegetable : Product
 {
     public bool IsOrganic { get; set; }
 
