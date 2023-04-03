@@ -1,5 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
+/* Dequeue використання для вилучення елементів з початку черги або з кінця.
+ *  черга підтримує роботу з обома кінцями (двостороння черга або deque), 
+ *   Dequeue можна використовувати для вилучення елементів з будь-якого кінця черги*/
+
 // Створюємо екземпляр класу Deque
 Deque<string> deque = new Deque<string>();
 
@@ -11,7 +15,7 @@ deque.EnqueueBack("Hello");
 Console.WriteLine(deque.DequeueFront() + " " + deque.DequeueBack()); // "Hello World"
 
 
-public class Deque<T>
+public class Deque<T> //<T> - позначення що тут можуть бути значення різного типу
 {
     private Node<T> head;
     private Node<T> tail;
@@ -120,10 +124,3 @@ public class Deque<T>
         }
     }
 }
-
-
-
-
-
-
-
