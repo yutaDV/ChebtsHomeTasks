@@ -1,4 +1,4 @@
-﻿//"AIzaSyAROjYhmm1F_6lbtWMEIuGhILSSctg23Gs"
+﻿
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -10,7 +10,7 @@ namespace YouTubeAPI
     {
         static async System.Threading.Tasks.Task Main(string[] args)
         {
-            var apiKey = "AIzaSyAROjYhmm1F_6lbtWMEIuGhILSSctg23Gs";
+            var apiKey = "write your api key";
             var playlistId = "PLSN6qXliOioz5lnckfofNcLJ3CnZJvEJO";
             var maxResults = 10;
 
